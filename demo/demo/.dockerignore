@@ -1,0 +1,11 @@
+# Ignorar archivos innecesarios para Docker
+target/
+.mvn/wrapper/maven-wrapper.jar
+.idea/
+*.iml
+*.iws
+.vscode/
+.DS_Store
+*.log
+.env
+.env.local
