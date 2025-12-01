@@ -32,7 +32,7 @@ public class SecurityConfig {
 
         http
                 // Habilitar CORS global (configurado en CorsConfig)
-                .cors(cors -> cors.configure(http))
+                .cors(cors -> {})
                 // Desactivar CSRF (no se usa con JWT)
                 .csrf(AbstractHttpConfigurer::disable)
                 // Definir rutas públicas y protegidas
