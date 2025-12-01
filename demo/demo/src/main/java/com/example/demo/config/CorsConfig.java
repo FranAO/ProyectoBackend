@@ -15,13 +15,8 @@ public class CorsConfig {
     public CorsFilter corsFilter() {
         CorsConfiguration config = new CorsConfiguration();
 
-        // ✅ Orígenes permitidos
-        config.setAllowedOrigins(List.of(
-                "http://localhost:3000", // frontend React (Vite)
-                "http://localhost:3001",
-                "http://localhost:9090", // Vite dev server alternativo
-                "http://127.0.0.1:3000"
-        ));
+        // ✅ Orígenes permitidos (incluyendo Postman y cualquier origen)
+        config.setAllowedOriginPatterns(List.of("*")); // Permite cualquier origen para desarrollo
 
         // ✅ Métodos permitidos
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
